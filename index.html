@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Leticia y Emilio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #F8F6F0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor-invitacion {
+            width: 100%;
+            max-width: 500px; 
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1); 
+        }
+
+        .contenedor-invitacion img {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .pagina-interactiva {
+            position: relative;
+            width: 100%;
+        }
+
+        /* ENLACES TRANSPARENTES (Para hacer clic) */
+        .enlace-fantasma {
+            position: absolute;
+            background-color: transparent; 
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .link-iglesia { top: 36%; left: 15%; width: 70%; height: 15%; }
+        .link-hacienda { top: 78%; left: 15%; width: 70%; height: 15%; }
+        .boton-confirmar { top: 32%; left: 12%; width: 76%; height: 9%; }
+
+        /* NUEVO EFECTO: ONDA EXPANSIVA (RIPPLE) */
+        @keyframes latido {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .efecto-onda {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid #5A6B4E; /* Verde oliva oscuro para que pegue con tus letras */
+            border-radius: 50%;
+            pointer-events: none; /* Deja pasar el clic hacia el enlace */
+            z-index: 5;
+            animation: latido 1.5s infinite ease-out;
+            /* Centra perfectamente el circulo en las coordenadas */
+            margin-top: -15px; 
+            margin-left: -15px;
+        }
+
+        /* Coordenadas exactas donde están dibujadas las manos */
+        .onda-1 { top: 38%; left: 68%; } /* Mano Iglesia */
+        .onda-2 { top: 81%; left: 73%; } /* Mano Hacienda */
+        .onda-3 { top: 39%; left: 69%; } /* Mano Botón Confirmar */
+
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-invitacion">
+        
+        <img src="pagina1.jpg" alt="Inicio Invitación">
+        
+        <div class="pagina-interactiva">
+            <img src="pagina2.jpg" alt="Ceremonia y Celebración">
+            
+            <div class="efecto-onda onda-1"></div>
+            <div class="efecto-onda onda-2"></div>
+
+            <a href="https://share.google/DDooZt2vbvqYOWGsv" class="enlace-fantasma link-iglesia" target="_blank"></a>
+            <a href="https://share.google/DDooZt2vbvqYOWGsv" class="enlace-fantasma link-hacienda" target="_blank"></a>
+        </div>
+        
+        <img src="pagina3.jpg" alt="Itinerario">
+        
+        <div class="pagina-interactiva">
+            <img src="pagina4.jpg" alt="Confirmación">
+            
+            <div class="efecto-onda onda-3"></div>
+
+            <a href="https://wa.me/34635325685?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda." class="enlace-fantasma boton-confirmar" target="_blank"></a>
+        </div>
+        
+        <img src="pagina5.jpg" alt="Despedida">
+    </div>
+
+</body>
+</html>
